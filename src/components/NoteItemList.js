@@ -12,7 +12,7 @@ function NoteItemList({notes, onDelete, onArchive, onActive}) {
                 onDelete={onDelete}
                 onActive={onActive}
                 onArchive={onArchive}
-                isArchive={note.archive}
+                isArchive={note.archived}
                 />
             ))}
         </div>
