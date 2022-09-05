@@ -9,7 +9,6 @@ class NoteApp extends React.Component {
         super(props);
         this.state = {
             notes: getInitialData(),
-            date: showFormattedDate(new Date()),
         }
 
         this.onDeleteHandler = this.onDeleteHandler.bind(this);
@@ -39,9 +38,9 @@ class NoteApp extends React.Component {
                     {
                         id: +new Date(),
                         title,
+                        createdAt: showFormattedDate(new Date()),
                         body,
                         archived: false,
-                        createdAt: this.state.date,
                     }
                 ]
             }
